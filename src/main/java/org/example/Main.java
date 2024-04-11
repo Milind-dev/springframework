@@ -7,10 +7,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-     ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
-    Doctor doctor =  context.getBean(Doctor.class);
-    doctor.assist();
-    Nurse nurse = (Nurse) context.getBean("nurse");
-    nurse.assist();
-    }
+      System.out.println("hello");
+      Engine engine = new Car();
+        Engine engine1 = new Bike();
+        engine.start();
+        engine1.start();
+
+  }
 }
