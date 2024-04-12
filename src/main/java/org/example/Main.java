@@ -14,9 +14,13 @@ public class Main {
         bike.startengine();
         bike.showColor();
 
-        Bike bike2 = ac.getBean("bike",Bike.class);
-        bike2.color = "Green";
-        bike2.showColor();
+//        Bike bike2 = ac.getBean("bike",Bike.class);
+//        bike2.color = "Green";
+//        bike2.showColor();
+
+        Car car = ac.getBean("car",Car.class);
+        bike.startengine();
+        bike.showColor();
 
     }
 }

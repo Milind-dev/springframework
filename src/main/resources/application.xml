@@ -24,4 +24,10 @@
         </constructor-arg>
 
     </bean>
+    <bean id="car" class="org.example.Car">
+        <constructor-arg name="engine" >
+            <bean class="org.example.Engine"></bean>
+        </constructor-arg>
+
+    </bean>
 </beans>
