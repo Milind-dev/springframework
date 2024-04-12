@@ -1,11 +1,14 @@
 package org.example;
 
 public class Bike {
-    String color = "Red"; //color = "Red" is dependent
-    Engine engine = new Engine(); //new Engine is dependent
-
-    public void sss(int x) {
-
+   String color;
+    public Bike(){
+        System.out.print("Bike");
     }
-    sss(222) //222 is dependent on x
+    public void setColor(String color){
+        this.color = color;
+    }
+    public void showColor(){
+        System.out.println("bike color is = "+color);
+    }
 }

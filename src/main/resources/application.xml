@@ -7,5 +7,9 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 <!--    <bean id="doctor" class="org.example.Doctor"></bean>-->
 <!--    <bean id="nurse" class="org.example.Nurse"></bean>-->
+        <bean id="bike" class="org.example.Bike"></bean>
 
+<!--    <bean>-->
+<!--            <property name="color" value="Red"></property>-->
+<!--        </bean>-->
 </beans>
