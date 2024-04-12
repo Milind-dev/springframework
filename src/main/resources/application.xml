@@ -11,8 +11,11 @@
       Bike bike = new Bike();
       bike.setColor("Red");
     -->
+<!--    <bean id="bike" class="org.example.Bike">-->
+<!--        <property name="color" value="Red" />-->
+<!--    </bean>-->
     <bean id="bike" class="org.example.Bike">
-        <property name="color" value="Red" />
+        <constructor-arg name="color" value="Red"></constructor-arg>
     </bean>
 
 </beans>
