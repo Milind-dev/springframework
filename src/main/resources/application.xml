@@ -14,8 +14,14 @@
 <!--    <bean id="bike" class="org.example.Bike">-->
 <!--        <property name="color" value="Red" />-->
 <!--    </bean>-->
-    <bean id="bike" class="org.example.Bike">
-        <constructor-arg name="color" value="Red"></constructor-arg>
-    </bean>
+<!--    <bean id="bike" class="org.example.Bike">-->
+<!--        <constructor-arg name="color" value="Red"></constructor-arg>-->
+<!--    </bean>-->
 
+    <bean id="bike" class="org.example.Bike">
+        <constructor-arg name="engine" >
+            <bean class="org.example.Engine"></bean>
+        </constructor-arg>
+
+    </bean>
 </beans>
