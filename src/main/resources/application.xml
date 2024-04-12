@@ -4,7 +4,12 @@
        xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+">
+
+
 <!--    <bean id="doctor" class="org.example.Doctor"></bean>-->
 <!--    <bean id="nurse" class="org.example.Nurse"></bean>-->
     <!--
@@ -30,15 +35,25 @@
 <!--        </constructor-arg>-->
 <!--    </bean>-->
 
+<!--by name search by name if two beans are same id then bean first search type like HRDEPT or Company-->
+    <bean id="deptObj" class="org.example.HRDept"></bean>
+    <bean id="company" class="org.example.Company" autowire="constructor" ></bean>
 
-    <bean id="engineObj" class="org.example.Engine"></bean>
-    <bean id="bike" class="org.example.Bike">
-            <constructor-arg name="engine" ref="engineObj" />
-    </bean>
-    <bean id="car" class="org.example.Car">
-        <constructor-arg name="engine" ref="engineObj" />
-    </bean>
+<!--    work fine but byName give error -->
+    <!--    <bean id="deptObj" class="org.example.HRDept"></bean>-->
+    <!--    <bean id="deptObj" class="org.example.Company" autowire="constructor" ></bean>-->
+
+
+    <!--    <bean id="deptObj" class="org.example.HRDept"></bean>-->
+<!--    <bean id="deptObj" class="org.example.Company" autowire="byName" ></bean>-->
+
+
+<!--    here use qualifier("deptobj2")-->
+<!--<bean id="deptObj" class="org.example.HRDept"></bean>-->
+<!--<bean id="deptObj2" class="org.example.HRDept" autowire="byName" ></bean>-->
+
 
 
 
 </beans>
+<!--by name, bytype, default, constructor-->
